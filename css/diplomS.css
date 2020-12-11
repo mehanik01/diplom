@@ -1,0 +1,919 @@
+html body {
+	margin: 0;
+	padding: 0;
+	min-width: 320px;
+	font-family: Roboto, sans-serif;
+}
+
+* {
+  outline: none;
+}
+
+nav a {
+	color: #8993ad;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+span {
+	color: #f72b66;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header {
+	position: relative;
+	margin: 0 auto;
+	background-image: url("../diplom-img/fon.svg");
+	background-repeat: no-repeat;
+	background-position: top 108px right -124px;
+	height: 738px;
+}
+
+.header-box {
+	display: flex;
+	align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.header-call {
+  width: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 8;
+}
+
+.menu {
+	width: 280px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-box__link {
+  font-size: 16px;
+  color: #1f1f24;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-box__link:hover {
+  color: #f53f4f;
+  transform: scale(1.1);
+  font-weight: 500;
+}
+
+.burger {
+  display: none;
+	width: 30px;
+	height: 12px;
+  position: relative;
+  border: none;
+  background-color: #fff;
+}
+
+.header__burger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 12px;
+}
+
+.burger__line-first {
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(10deg, #ff8f5a, #ff8f5a 20%, #ff2f96);
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.burger__line-second {
+  top: auto;
+  width: 100%;
+	height: 3px;
+	background: linear-gradient(10deg, #ff8f5a, #ff8f5a 20%, #ff2f96);
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.burger__line-first.active {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.burger__line-second.active {
+  transform: rotate(-45deg);
+}
+
+.burger span {
+  transition: transform 0.3s;
+}
+
+.header__link-burger {
+  color: #000;
+}
+
+.header__menu {
+  z-index: 10;
+  top: 50px;
+  left: -160px;
+  width: 160px;
+  position: absolute;
+  background: linear-gradient(10deg, #ff8f5a, #ff8f5a 20%, #ff2f96);
+  transition: all 0.3s ease 0s;
+}
+
+.header__menu.active {
+  left: 0;
+}
+
+.header__list li {
+  margin: 20px 0 0 20px;
+}
+
+.header__list li:last-child {
+  margin: 20px 0 20px 20px;
+}
+
+.number {
+	font-size: 25px;
+	color: #1f1f24;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.call-button {
+	width: 207px;
+	height: 45px;
+	border: 1px solid #f82370;
+	color: #f53f4f;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.call-button_mobile {
+  display: none;
+  border: none;
+  width: 26px;
+  height: 26px;
+  background-image: url('../diplom-img/call-button.png');
+  cursor: pointer;
+}
+
+.central-container p {
+	color: #8993ad;
+	margin: 0 0 45px 0;
+	font-weight: 400;
+	font-size: 25px;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.fixed-container {
+	position: relative;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-info {
+	position: relative;
+	z-index: 1;
+}
+
+.header-img {
+  position: absolute;
+  top: 12%;
+  right: 15%;
+}
+
+.title {
+  display: block;
+  margin-top: 29%;
+  padding-left: 10px;
+}
+
+.header-info__name {
+  font-size: 80px;
+	font-weight: 900;
+	margin: 0;
+	color: #1f1f24;
+}
+
+.header-info__text {
+	font-size: 25px;
+  color: #8993ad;
+  margin: 0;
+  padding-top: 13px;
+}
+
+.header-info__btn {
+  display: inline-block;
+  margin-top: 45px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+	padding: 19px 70px;
+	background-color: #ff4e2e;
+	cursor: pointer;
+}
+
+.header-elements {
+  font-weight: 700;
+  color: #f44d3f;
+}
+
+.header-elements__element-1 {
+  position: absolute;
+  font-size: 40px;
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+  top: -30px;
+  left: -30px;
+  transform: translateX(150px) translateY(100px) rotate(30deg);
+}
+
+.header-elements__element-2 {
+  position: absolute;
+  font-size: 30px;
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+  top: 10%;
+  left: 30%;
+  transform: translateX(150px) translateY(100px) rotate(-30deg);
+}
+
+.header-elements__element-3 {
+  position: absolute;
+  font-size: 57px;
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+  top: 50%;
+  left: 30px;
+  transform: translateX(150px) translateY(100px) rotate(15deg);
+}
+
+.header-elements__element-4 {
+  position: absolute;
+  font-size: 37px;
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+  top: 70%;
+  left: 45%;
+  transform: translateX(150px) translateY(100px) rotate(30deg);
+}
+
+.header-elements__element-5 {
+  position: absolute;
+  font-size: 40px;
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+  top: 85%;
+  left: 15%;
+  transform: translateX(150px) translateY(100px) rotate(-25deg);
+}
+
+.caption {
+	color: #262626;
+	text-align: center;
+  font-size: 54px;
+  margin-top: 87px;
+}
+
+.buy {
+  width: 270px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  background-color: #ff4e2e;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+}
+
+.section-info__btn-buy {
+	margin: 60px auto;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	flex-wrap: wrap;
+	margin-top: 90px;
+}
+
+.row-text {
+	padding-top: 80px;
+  text-align: center;
+  font-size: 20px;
+  color: #8993AD;
+}
+
+.row-items-1 {
+	background-image: url('../diplom-img/comp.png');
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+.row-items-2 {
+  background-image: url('../diplom-img/phone.png');
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+.row-items-3 {
+	background-image: url('../diplom-img/C.png');
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+.row-items-4 {
+	background-image: url('../diplom-img/system.png');
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+.swiper-container {
+  height: 400px;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 204px;
+}
+
+.slider-title {
+  text-align: center;
+  font-size: 54px;
+  margin: 0;
+  padding-bottom: 100px;
+}
+
+.card {
+  min-height: 290px;
+  color: #111;
+  font-size: 16px;
+}
+
+.swiper-slide {
+  height: 100%;
+}
+
+.swiper-slide img{
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+}
+
+.slide-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #8993ad;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	box-shadow: 0 0 10px 3px #00000055;
+	border-radius: 150px;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	background-position: center;
+  border: none;
+  background-size: 40px 40px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-next {
+  background-image: url('../diplom-img/right.png');
+  right: -21px;
+}
+
+.swiper-button-prev {
+  background-image: url('../diplom-img/left.png');
+  left: -21px;
+}
+
+.swiper-pagination {
+  display: none;
+  top: 92%;
+}
+
+.swiper-pagination-bullet {
+  background-color: #f72b66;
+}
+
+.buy-btn {
+  margin: 43px auto;
+}
+
+.gradient {
+  position: relative;
+  margin-top: 100px;
+	background: linear-gradient(10deg, #ff8f5a, #ff8f5a 20%, #ff2f96);
+}
+
+.gradient-container {
+  max-width: 926px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.gradient__title {
+  font-size: 45px;
+	color: #fff;
+	line-height: 1.5;
+	padding-top: 70px;
+	margin: 0;
+}
+
+.gradient__text {
+	color: #fff;
+	font-size: 20px;
+	line-height: 1.5;
+  padding-bottom: 78px;
+  padding-top: 23px;
+  margin: 0;
+}
+
+.gradient-elements {
+  font-weight: 700;
+  color: #fff;
+}
+
+.gradient-elements__element-1 {
+  position: absolute;
+  font-size: 43px;
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+  top: -36px;
+  left: -18px;
+  transform: translateX(150px) translateY(100px) rotate(30deg);
+}
+
+.gradient-elements__element-2 {
+  position: absolute;
+  font-size: 40px;
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+  top: -6%;
+  left: 79%;
+  transform: translateX(150px) translateY(100px) rotate(-25deg);
+}
+
+.gradient-elements__element-3 {
+  position: absolute;
+  font-size: 57px;
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+  top: 40%;
+  left: 96px;
+  transform: translateX(150px) translateY(100px) rotate(15deg);
+}
+
+.gradient-elements__element-4 {
+  position: absolute;
+  font-size: 37px;
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+  top: 56%;
+  left: 67%;
+  transform: translateX(150px) translateY(100px) rotate(23deg);
+}
+
+.gradient-elements__element-5 {
+  position: absolute;
+  font-size: 48px;
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+  top: 43%;
+  left: 85%;
+  transform: translateX(150px) translateY(100px) rotate(-18deg);
+}
+
+.footer-menu {
+	display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.footer-mainmenu li {
+	padding-top: 15px;
+}
+
+.footer-contact li {
+	list-style-type: none;
+  margin-top: 25px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.fa {
+	margin-right: 10px;
+}
+
+.awe {
+	text-decoration: none;
+	color: #000;
+	font-size: 30px;
+}
+
+.call-btn {
+	width: 248px;
+	height: 45px;
+	border: 1px solid #ff5e79;
+	color: #ff5e79;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.footer-social {
+  padding-top: 18px;
+}
+
+.social {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 30px;
+}
+
+.vk {
+	display: flex;
+	width: 35px;
+	height: 30px;
+	background-position: bottom left;
+	background-image: url('../diplom-img/spirt.gif');
+	background-repeat: no-repeat;
+}
+
+.facebook {
+	display: flex;
+	width: 35px;
+	height: 30px;
+	background-position: bottom left -55px;
+	background-image: url('../diplom-img/spirt.gif');
+	background-repeat: no-repeat;
+}
+
+.twitter {
+	display: flex;
+	width: 35px;
+	height: 30px;
+	background-position: bottom left -105px;
+	background-image: url('../diplom-img/spirt.gif');
+	background-repeat: no-repeat;
+}
+
+.instagram {
+	display: flex;
+	width: 35px;
+	height: 30px;
+	background-position: bottom left -165px;
+	background-image: url('../diplom-img/spirt.gif');
+	background-repeat: no-repeat;
+}
+
+.footer {
+  height: 80px;
+  background-color: #31293c;
+  margin-top: 100px;
+}
+
+.footer-text {
+  color: #fff;
+  text-align: center;
+  padding-top: 30px;
+}
+
+@media (max-width: 1250px) {
+  .burger {
+    display: block;
+    left: 50px;
+  }
+  .menu {
+    display: none;
+  }
+	.header-info__name {
+		font-size: 55px;
+  }
+	.gradient__title {
+		padding: 70px 40px 40px 0;
+		line-height: 1;
+	}
+	.gradient__text {
+		padding: 10px 40px 50px 0;
+  }
+  .header {
+    background-position: top 200px right -250px;
+  }
+  .row-items-1 {
+    width: 50%;
+  }
+  .row-items-2 {
+    width: 50%;
+  }
+  .row-items-3 {
+    width: 50%;
+  }
+  .row-items-4 {
+    width: 50%;
+  }
+  .header-elements__element-1 {
+    left: -80px;
+  }
+  .header-elements__element-2 {
+    top: 1%;
+    left: 75%;
+  }
+  .header-elements__element-3 {
+    top: 75%;
+    left: -10%;
+  }
+  .header-elements__element-4 {
+    top: 10%;
+    left: 25%;
+  }
+  .header-elements__element-5 {
+    top: 70%;
+    left: 15%;
+  }
+  .gradient-elements__element-1 {
+    font-size: 32px;
+    top: -30%;
+  }
+  .gradient-elements__element-2 {
+    top: 45%;
+    left: 72%;
+    font-size: 35px;
+  }
+  .gradient-elements__element-3 {
+    display: none;
+  }
+  .gradient-elements__element-4 {
+    font-size: 25px;
+    top: 55%;
+    left: 30%;
+  }
+  .gradient-elements__element-5 {
+    display: none;
+  }
+}
+
+@media (max-width: 1050px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+  .slider-container {
+    margin: 0 10px;
+  }
+  .swiper-pagination {
+    display: block;
+  }
+}
+
+@media (max-width: 1000px) {
+  .gradient__title {
+		font-size: 34px;
+		padding: 70px 0 0 0;
+		line-height: 1.2;
+  }
+  .figure {
+    margin-top: 25px;
+  }
+  .gradient__text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+	.header {
+		margin-bottom: 220px;
+	}
+	.header-box {
+    height: 60px;
+    margin: 0;
+	}
+	.header-info {
+		order: 1;
+	}
+	.flex-container {
+		flex-direction: column;
+	}
+	.title {
+    text-align: center;
+    margin-top: 20px;
+	}
+	.header-info__name {
+		font-size: 45px;
+	}
+	.header-info__text {
+		font-size: 18px;
+  }
+  .header-elements__element-2 {
+    left: 60%;
+  }
+  .header-elements__element-4 {
+    display: none;
+  }
+  .header-elements__element-5 {
+    top: 24%;
+    left: 1%;
+  }
+  .gradient-elements__element-2 {
+    top: 30%;
+    left: 62%;
+  }
+  .gradient-elements__element-4 {
+    top: 50%;
+  }
+  .awe {
+    font-size: 24px;
+  }
+  .footer {
+    height: 50px;
+  }
+  .footer-text {
+    font-size: 12px;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 716px){
+  .footer-social {
+    margin-top: 30px;
+  }
+  .gradient__title {
+		font-size: 32px;
+		padding: 30px 10px;
+  }
+  .burger {
+    left: 0;
+  }
+  .social {
+    margin-bottom: 20px;
+  }
+  .footer {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 550px) {
+	.header {
+		background-position: top 120px right -105px;
+		background-size: 140%;
+		height: 458px;
+		margin-bottom: 225px;
+	}
+	.header-box {
+		height: 55px;
+  }
+  .header-call {
+    width: 210px;
+  }
+  .call-button {
+    display: none;
+  }
+  .call-button_mobile {
+    display: block;
+  }
+	.flex-container {
+		padding-top: 60px;
+  }
+  .row li {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  .row li:nth-child(4n) {
+    padding-bottom: 0;
+  }
+  .header__call-order {
+    display: none;
+  }
+  .header__call-order_mobile {
+    display: block;
+  }
+  .section-info__btn-buy {
+    margin: 40px auto;
+    font-size: 16xp;
+  }
+  .number {
+    font-size: 18px;
+  }
+  .awe {
+    color: #8993ad;
+    font-size: 20px;
+  }
+  .footer-mainmenu {
+    margin-bottom: 30px;
+  }
+  .footer-mainmenu li {
+    padding-top: 10px;
+  }
+  .header-elements__element-1 {
+    left: -80px;
+    top: 10%;
+    font-size: 25px;
+  }
+  .header-elements__element-2 {
+    left: 40%;
+    font-size: 20px;
+  }
+  .header-elements__element-3 {
+    top: 39%;
+    left: -23%;
+    font-size: 30px;
+  }
+  .header-elements__element-5 {
+    font-size: 25px;
+    top: -3%;
+    left: 5%;
+  }
+  .gradient-elements__element-2 {
+    top: 38%;
+    left: 53%;
+    font-size: 25px;
+  }
+  .gradient-elements__element-4 {
+    top: 56%;
+    left: 17%;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 475px) {
+	.gradient__title {
+		font-size: 26px;
+		padding: 30px 10px 0 10px;
+	}
+	.gradient__text {
+		font-size: 13px;
+		padding: 15px 10px;
+  }
+  .element {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-info__name {
+    font-size: 30px;
+  }
+  .caption {
+    font-size: 35px;
+  }
+  .slider-title {
+    font-size: 35px;
+  }
+  .header {
+    background-image: none;
+  }
+  .header-elements__element-1 {
+    left: -105px;
+  }
+  .header-elements__element-2 {
+    left: 30%;
+    top: 8%;
+    font-size: 20px;
+  }
+  .header-elements__element-3 {
+    left: -38%;
+  }
+  .footer-mainmenu {
+    margin: 0;
+  }
+}
