@@ -157,6 +157,11 @@ a {
   font-weight: 700;
 }
 
+.number:hover {
+  background: rgba(0,0,0,0);
+  color: #ff4e2e;
+}
+
 .call-button {
 	width: 207px;
 	height: 45px;
@@ -164,6 +169,13 @@ a {
 	color: #f53f4f;
 	background-color: #fff;
 	cursor: pointer;
+}
+
+.call-button:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 0.4s;
 }
 
 .call-button_mobile {
@@ -240,6 +252,20 @@ a {
 	cursor: pointer;
 }
 
+.header-info__btn:hover {
+  box-shadow:
+    1px 1px #794040,
+    2px 2px #794040,
+    3px 3px #794040,
+    4px 4px #794040,
+    5px 5px #794040,
+    6px 6px #794040,
+    7px 7px #794040;
+  -webkit-transform: translateX(-7px);
+  transform: translateX(-7px);
+  transition: 0.4s;
+}
+
 .header-elements {
   font-weight: 700;
   color: #f44d3f;
@@ -313,6 +339,13 @@ a {
   font-size: 18px;
 }
 
+.buy:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 0.4s;
+}
+
 .section-info__btn-buy {
 	margin: 60px auto;
 }
@@ -383,6 +416,13 @@ a {
 
 .swiper-slide {
   height: 100%;
+}
+
+.swiper-slide:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.1);
+  transition: 0.4s;
 }
 
 .swiper-slide img{
@@ -531,8 +571,15 @@ a {
   margin-top: 60px;
 }
 
-.footer-mainmenu li {
-	padding-top: 15px;
+.footer__link {
+  padding-top: 15px;
+}
+
+.footer__link a:hover {
+  color: #f53f4f;
+  transform: scale(1.1);
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 .footer-contact li {
@@ -540,6 +587,13 @@ a {
   margin-top: 25px;
   font-size: 25px;
   font-weight: 500;
+}
+
+.footer-contact li:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 0.4s;
 }
 
 .fa {
@@ -561,6 +615,13 @@ a {
 	cursor: pointer;
 }
 
+.call-btn:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 0.4s;
+}
+
 .footer-social {
   padding-top: 18px;
 }
@@ -569,6 +630,13 @@ a {
 	display: flex;
 	justify-content: space-between;
 	padding-top: 30px;
+}
+
+.social li:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.4);
+  transition: 0.4s;
 }
 
 .vk {
